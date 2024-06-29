@@ -1,0 +1,776 @@
+@font-face{
+   font-family: 'SF Pro Display' ;
+   src: url(../fonts/SFPRODISPLAYMEDIUM.OTF);
+}
+
+@font-face{
+
+    font-family: 'Sharp-Grotesk';
+    src: url(../fonts/Sharp-Grotesk.ttf);
+}
+
+@font-face{
+    font-family:"times new roman";
+    src: url(../fonts/timesnewroman.ttf);
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+.header{
+     margin: 0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 15px;
+     width: 100%;
+     background: url(../img/image.png);
+     background-size: cover;
+     background-repeat: no-repeat;
+     height: 100%;
+     padding: 2%
+}
+ 
+
+.header_top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.header_login{
+    display: flex;
+    position: absolute;
+    right: 1%;
+    top: 5%;
+}
+
+.header_login>a{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    border: solid 1px white;
+    min-height: 30px;
+    min-width: 115px;
+    justify-content: center;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+.header_login>a>span{
+    font-family: 'SF Pro Display';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14.32px;
+    text-align: left;
+    color: #FFFFFF;
+    align-items: center;
+}
+
+.header_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.header_content_heading>h2{
+    font-family:'Sharp-Grotesk';
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.header_content_forms>form.content_forms_top_form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.content_forms_top_form_top{
+    display: flex;
+    align-items: center;
+}
+
+.form_item{
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+    padding: 10px;
+    border-right: solid 1px  #DBE0E7;
+    width: calc(100% / 3);
+}
+
+.form_item:first-child{
+    border-top-left-radius:10px ;
+    border-bottom-left-radius: 10px;
+}
+
+.form_item:last-child{
+    border-top-right-radius:10px ;
+    border-bottom-right-radius: 10px;
+}
+
+.form_item>input{
+    background: transparent;
+    border: none;
+    height:auto;
+    width: 16%;
+}
+
+input[type="date"]{
+    width: 15px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url(../img/calendar.png) no-repeat;
+  }
+
+.form_item>label{
+    font-family: 'SF Pro Display';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.09px;
+    text-align: left;
+    color: #505A68;
+}
+
+.content_forms_bottom>.flex{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    justify-content: center;
+}
+
+.form-row{
+    background-color: #FFFFFF;
+    min-height: 100px;
+    width: calc(100% / 2 );
+    border-radius: 10px;
+    padding: 20px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+} 
+
+.label_input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label_input>label{
+    font-family: 'SF Pro Display';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.09px;
+    text-align: left;
+    color: #505A68;
+}
+
+.label_input>input{
+    width: 15%;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #DBE0E7;
+    padding-left: 4%;
+}
+
+
+.values{
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.values>input{
+    max-width: 80px;
+    height: 100%;
+    border-radius: 6px;
+    border:  solid 1px #DBE0E7;
+    padding-left: 10%;
+    text-align: center
+}
+
+.span_values{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.span_values>span{
+    font-family: 'SF Pro Display';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 13.13px;
+    text-align: center; 
+}
+
+.range-block{
+    display: flex;
+    justify-content: center;
+}
+.slidecontainer,
+.slidecontainer>input{
+    width: 100%;
+}
+
+.content-forms-btn{
+    width: 100%;
+    background-color: #0C73FE;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 10px;
+}
+
+.content-forms-btn-title>span{
+    font-family: 'SF Pro Display';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.87px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+
+
+
+.form-results{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px transparent;
+    padding: 5px 15px;
+    border-radius: 50px;
+    background-color: #085ed3;
+}
+
+.form-results>p{
+    margin: 0;
+    font-family: 'SF Pro Display';
+    font-size: 13px;
+    font-weight: 100;
+    text-align: left;
+    color: #FFFFFF; 
+}
+
+.main{
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 1%;
+}
+
+.main_content{
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    padding-bottom: 45px
+}
+
+.main_content_boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.main_content_boxes-box{
+    width: calc(100% /  5 - 5px);
+    position: relative;
+    border-radius:10px ;
+    border: solid 1px transparent;
+
+}
+
+.content_boxes-box-img ,.content_boxes-box-img>img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.content_boxes-box-img{
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.busy::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:black;
+    opacity: 0.5;
+}
+
+
+
+
+
+
+.content_boxes-box-absolute{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+}
+
+.box-absolute-title>span{
+    font-family: 'SF Pro Display';
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21.48px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.box-absolute-desc>.desc-items{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+}
+
+.box-absolute-desc>.desc-items>.item:first-child>span{
+    font-family: 'SF Pro Display';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16.71px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.box-absolute-desc>.desc-items>.item:last-child>span{
+    font-family: 'SF Pro Display';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.71px;
+    text-align: left;
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+
+.box-absolute-info{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+
+.box-absolute-info>span{
+    font-family: 'SF Pro Display';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16.71px;
+    color: #FFFFFF;
+}
+
+.purchased>.box-absolute-title>span,
+.purchased>.box-absolute-desc>.desc-items>.item>span{
+    opacity: 0.4;
+}
+
+
+
+.main_content_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_content_btn>a{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.main_content_btn>a>span{
+    font-family: 'SF Pro Display';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19.8px;
+    text-align: left;
+    color: #000000;
+}
+
+.footer{
+    background-color:  #051934;
+    padding: 2%;
+}
+
+.footer_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer_content_block>ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer_content_block>a{
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 25.2px;
+    text-align: center;
+    color: #FFFFFF;    
+    text-decoration: none;
+}
+
+.footer_content_block:last-child{
+    position: relative;
+}
+
+.footer_content_block:last-child::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: white;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+.modal:not(.show),
+.thank_you:not(.show){
+    display: none;
+}
+
+
+
+
+.modal_site {
+
+    background-color: #EFF1F4;
+    margin:auto ;
+    display: flex;
+    padding: 3%;
+    width: calc((1219 / 1440) * 100%);
+    justify-content: center;
+    column-gap: 50px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.site_left,.site_right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.site_left_img,
+.site_left_img>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.site_right_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.right_content_heading>span{
+    font-family:'Sharp-Grotesk';
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 43.2px;
+    color: #000000;
+}
+
+.right_content_text {
+    max-width: 525px;
+}
+
+.right_content_text>span{
+    font-family: 'SF Pro Display';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #000000;
+    margin: 0;
+}
+
+.right_content_forms>form.right_content_forms-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_forms_form-row:first-child{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    column-gap: 15px;
+    justify-content: center;
+}
+
+.form_block{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    background-color: #FFFFFF;
+    min-height: 50px;
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.form_block>input{
+    border:none ;
+    box-shadow: none;
+    outline: none;
+    max-width: 16%;
+    text-align: center;
+    font-size: 16px;
+}
+.form_block>label{
+    font-family: 'SF Pro Display';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.48px;
+    color: #505A68;
+    opacity: 0.8;
+}
+
+.content_forms_form-row:nth-child(2),
+.content_forms_form-row:nth-child(3){
+    display: flex;
+    align-items: center;
+    width: 82%;
+    background-color: #FFFFFF;
+    min-height: 50px;
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.content_forms_form-row:nth-child(3)>input,
+.content_forms_form-row:nth-child(2)>input{
+    text-align: right;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 16px;
+    font-family: 'SF Pro Display';
+}
+
+.content_forms_form-row>label{
+    font-family:'SF Pro Display';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.48px;
+    color: #000000;
+}
+
+.right_content_button>button{
+    min-height: 70px;
+    width: 82%;
+    border-radius: 10px;
+    background-color: #0C73FE;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    font-family: 'SF Pro Display';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23.87px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.right_content_button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.right_content_inf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right_content_inf>span{
+    font-family: 'SF Pro Display';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #000000;
+    opacity: 0.6;
+}
+
+.close_button>button{
+   min-width: 130px;
+   min-height: 35px;
+   border: none;
+   box-shadow: none;
+   outline: none;
+   background-color: #0000000D;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   column-gap: 10px;
+   border-top-left-radius: 40px;
+   border-bottom-left-radius: 40px;
+   position: absolute;
+   right: 0;
+   top: 5%;
+}
+
+.close_button>button>span{
+    font-family: 'SF Pro Display';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.71px;
+    color: #000000;
+    opacity: 0.5;
+    
+}
+
+.modal{
+    position: fixed;
+    left: 0;
+    top: 5%;
+    width: 100%;
+}
+
+
+
+
+.thank_you_site{
+    background-color: #EFF1F4;
+    width: calc((694 / 1440) * 100%);
+    margin: auto;
+    padding: 5%;
+    border-radius: 20px;
+    position: relative;
+}
+.thank_you_site_content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.thank_you_title>span{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    font-family:'Sharp-Grotesk';
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 43.2px;
+    color: #000000;
+}
+
+.thank_you_paragraph>span{
+   font-family: 'SF Pro Display';
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 27px;
+   color: #000000; 
+}
+
+.thank_you_paragraph {
+    max-width: 550px;
+}
+
+.continue_button{
+    width: 100%;
+}
+
+.continue_button>.continue_button_btn{
+    width: 100%;
+    min-height: 70px;
+    background-color: #0C73FE;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: 'SF Pro Display';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23.87px;
+
+}
+
+.thank_you_inf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank_you_inf>span{
+    font-family: 'SF Pro Display';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #000000;
+    opacity: 0.6;
+
+}
+
+.thank_you{
+    position: fixed;
+    left: 0;
+    top: 20%;
+    width: 100%;
+}
