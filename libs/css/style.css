@@ -27,6 +27,11 @@ body{
     margin: 0;
 }
 
+input{
+    outline: none;
+    box-shadow: none;
+}
+
 .header{
      margin: 0;
      display: flex;
@@ -134,6 +139,7 @@ body{
     border: none;
     height:auto;
     width: 16%;
+    text-align: right;
 }
 
 input[type="date"]{
@@ -209,7 +215,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 100%;
     border-radius: 6px;
     border:  solid 1px #DBE0E7;
-    padding-left: 10%;
     text-align: center
 }
 
@@ -217,14 +222,27 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 6px;
 }
 
 .span_values>span{
     font-family: 'SF Pro Display';
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 400;
     line-height: 13.13px;
     text-align: center; 
+    position: relative;
+    min-width: 13px;
+}
+
+.time-block .span_values> span:before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 6px;
+    width: 1px;
+    height: 6px;
+    background: gray;
 }
 
 .range-block{
@@ -245,7 +263,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 7px;
     padding: 10px;
 }
 
@@ -332,6 +350,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0.5;
 }
 
+.main_content_boxes-box:hover .content_boxes-box-img::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: black;
+    opacity: 0.5;
+    z-index: 1000;
+}
+
 
 
 
@@ -340,11 +370,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .content_boxes-box-absolute{
     position: absolute;
     bottom: 5%;
-    left: 5%;
+    left: 0;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-
+    padding: 0 5%;
+    width: 100%;
+    z-index: 10000;
 }
 
 .box-absolute-title>span{
@@ -484,19 +516,25 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 .modal_site {
-
     background-color: #EFF1F4;
     margin:auto ;
     display: flex;
-    padding: 3%;
+    padding:3% 2% ;
     width: calc((1219 / 1440) * 100%);
     justify-content: center;
-    column-gap: 50px;
+    column-gap: 5px;
     position: relative;
     border-radius: 20px;
 }
 
-.site_left,.site_right{
+.site_left{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.site_right{
     width: 50%;
     display: flex;
     justify-content: center;
@@ -517,9 +555,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .site_right_content{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     row-gap: 20px;
+}
+
+.right_content_heading {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding: 0 9%;
 }
 
 .right_content_heading>span{
@@ -528,10 +571,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-weight: 600;
     line-height: 43.2px;
     color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
 }
 
 .right_content_text {
     max-width: 525px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 .right_content_text>span{
@@ -547,8 +598,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .content_forms_form-row:first-child{
@@ -590,6 +641,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .content_forms_form-row:nth-child(2),
 .content_forms_form-row:nth-child(3){
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     width: 82%;
     background-color: #FFFFFF;
@@ -600,21 +652,29 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .content_forms_form-row:nth-child(3)>input,
-.content_forms_form-row:nth-child(2)>input{
+.content_forms_form-row:nth-child(2)>input{ 
+   font-family:'SF Pro Display';
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 21.48px;
+   border: none;
+   width: 70%;
+}
+
+.content_forms_form-row:nth-child(2)>input::placeholder,
+.content_forms_form-row:nth-child(3)>input::placeholder{
+    color: #000000;
+}
+
+
+.content_forms_form-row>label{
     text-align: right;
     border: none;
     outline: none;
     box-shadow: none;
     font-size: 16px;
     font-family: 'SF Pro Display';
-}
-
-.content_forms_form-row>label{
-    font-family:'SF Pro Display';
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21.48px;
-    color: #000000;
+    color: #505A68;
 }
 
 .right_content_button>button{
