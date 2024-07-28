@@ -25,12 +25,23 @@
 }
 body{
     margin: 0;
+    position: relative;
 }
 
 input{
     outline: none;
     box-shadow: none;
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
 
 .header{
      margin: 0;
@@ -58,7 +69,7 @@ input{
     display: flex;
     position: absolute;
     right: 1%;
-    top: 5%;
+    top:5%;
 }
 
 .header_login>a{
@@ -387,6 +398,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #FFFFFF;
     margin: 0;
 }
+
+
+.box-absolute-desc{
+    max-height: 20px;
+    overflow: hidden;
+}
+
+
+
+
+@keyframes  fliptop{
+    form{
+        max-height: 25px;
+        overflow: hidden;
+    }
+
+    to{
+         max-height: none;
+         overflow: auto;
+    }
+}
+
+.main_content_boxes-box:hover .box-absolute-desc{
+    max-height: none;
+    overflow: auto;
+    animation:fliptop 3s 1;
+}
+
 
 .box-absolute-desc>.desc-items{
     display: flex;
@@ -751,6 +790,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     left: 0;
     top: 5%;
     width: 100%;
+    z-index: 100000;
+}
+
+.modal-overbackground{
+    z-index: 10000;
 }
 
 
@@ -771,6 +815,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     row-gap: 20px;
 }
 
+
+.thank_you_title {
+    width: 100%;
+}
 .thank_you_title>span{
     display: flex;
     align-items: center;
@@ -833,4 +881,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     left: 0;
     top: 20%;
     width: 100%;
+}
+
+div.modal.show ~ .modal-overbackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: black;
+    opacity: 0.7;
 }

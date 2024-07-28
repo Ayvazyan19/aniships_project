@@ -29,6 +29,22 @@
     }
 }
 
+@media all and (max-width:1366px){
+    .modal_site {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .site_right,.site_left{
+        width: 100%;
+    }
+
+    .site_right_content {
+        width: 100%;
+    }
+}
+
 @media all and (max-width:1023px){
     .header_content_heading{
         display: flex;
@@ -103,7 +119,7 @@
         display: flex;
         position: absolute;
         right: 2.5%;
-        top: 2.5%;
+        top:2.5%;
     }
 }
 
@@ -133,6 +149,13 @@
 
 }
 
+@media all and (max-width:940px){
+    .thank_you_site>.close_button>button {
+        top: 1%;
+        min-width: auto;
+        padding: 0 15px;
+    }
+}
 
 
 @media all and (max-width:767px) and (min-width:311px){
@@ -327,6 +350,47 @@
         line-height: 20.7px;
         color: #FFFFFF;
     }
+
+    .right_content_heading{
+        width: 100%;
+    }
+
+    .right_content_heading>span {
+        font-size: 26px;
+        line-height: 26px;
+    }
+
+    .right_content_text {
+        text-align: center;
+    }
+
+    .content_forms_form-row:first-child {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content_forms_form-row:first-child>div{
+        width: 100%;
+    }
+
+    .content_forms_form-row:nth-child(2),
+    .content_forms_form-row:nth-child(3){
+        width: 100%;
+    }
+    button.submit_button {
+        width: 100%;
+    }
+
+    .close_button>button {
+        top: 1%;
+        min-width:auto;
+        padding: 0 15px
+        
+    }
+
+    .close_button>button>span{
+        display: none;
+    }
 }
 
 @media all and (max-width:767px) and (min-width:450px){
@@ -395,7 +459,45 @@
         right: 3%;
         width: 10%
     }
+
+    .right_content_heading{
+        padding: 0;
+    }
+
+    .content_forms_form-row:nth-child(3),
+    .content_forms_form-row:nth-child(2){
+        padding: 15px 0;
+    }
+
+    .content_forms_form-row>label {
+        font-size: 13px;
+    }
+
+    .content_forms_form-row:nth-child(3)>input,
+    .content_forms_form-row:nth-child(2)>input{
+      font-size: 16px;
+    }
+
+    .thank_you_title>span {
+        font-size: 26px;
+    }
+
+    .thank_you_paragraph{
+        text-align: center;
+    }
+
+    .thank_you_paragraph>span {
+        text-align: center;
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .thank_you_inf {
+        text-align: center;
+    }
 }
+
+
 
 
 
