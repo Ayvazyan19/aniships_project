@@ -69,7 +69,6 @@ input::-webkit-inner-spin-button {
     display: flex;
     position: absolute;
     right: 1%;
-    top:5%;
 }
 
 .header_login>a{
